@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://df4qyu6evjho1"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbtlouq6uquao" path="res://assets/race-future-model/race-future_body.res" id="1_84l3r"]
+[ext_resource type="Script" path="res://vehicle.gd" id="1_qrl8u"]
+[ext_resource type="ArrayMesh" uid="uid://5h7c62ydw2q2" path="res://assets/race-future-model/race-future-wheel-left.res" id="2_l7fsu"]
+[ext_resource type="ArrayMesh" uid="uid://j88glly3nxq3" path="res://assets/race-future-model/race-future-wheel-right.res" id="3_1qvwu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xn0t"]
+albedo_color = Color(0, 0, 0.156863, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yxnox"]
+points = PackedVector3Array(-0.578804, 0.0633286, -1.30844, 0.468283, 0.458062, 0.600774, -0.543187, 0, 1.26632, -0.367754, 0.569957, -1.35075, 0.560937, 0.0633286, -1.30844, -0.48615, 0.458062, 0.600774, 0.52532, 0, 1.26632, 0.392073, 0.569957, -1.35075, -0.578804, 0.190085, 1.35075, -0.345328, -1.11022e-16, -1.26632, -0.0645511, 0.613504, -0.29657, -0.578804, 0.485519, -1.0551, 0.560937, 0.190085, 1.35075, 0.560937, 0.485519, -1.0551, 0.564982, 0, -0.474747, -0.582848, 0, -0.474747, 0.35, 0.0143272, -1.20903, 0.392073, 0.569957, -1.26613, -0.367754, 0.569957, -1.26613, 0.539716, 0.235476, -1.25971)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3axq"]
+albedo_color = Color(0.707313, 0.931706, 0.90933, 1)
+
+[node name="VehicleBody3D" type="VehicleBody3D"]
+script = ExtResource("1_qrl8u")
+
+[node name="Race-futureBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000750498, 0, 1, 0, 1, 0, -1, 0, 0.000750498, 0.109981, 0, -0.109613)
+mesh = ExtResource("1_84l3r")
+surface_material_override/0 = SubResource("StandardMaterial3D_4xn0t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.000750498, 0, 1, 0, 1, 0, -1, 0, 0.000750498, 0.109981, 0, -0.109613)
+shape = SubResource("ConvexPolygonShape3D_yxnox")
+
+[node name="VehicleWheel3D" type="VehicleWheel3D" parent="."]
+transform = Transform3D(0.000375249, 0, 0.5, 0, 0.5, 0, -0.5, 0, 0.000375249, 0.699292, 0, -0.555209)
+use_as_steering = true
+wheel_radius = 0.4
+wheel_rest_length = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleWheel3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = ExtResource("2_l7fsu")
+surface_material_override/0 = SubResource("StandardMaterial3D_o3axq")
+
+[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(0.000375249, 0, 0.5, 0, 0.5, 0, -0.5, 0, 0.000375249, 0.698622, 0, 0.336439)
+use_as_steering = true
+wheel_radius = 0.4
+wheel_rest_length = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleWheel3D2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = ExtResource("3_1qvwu")
+surface_material_override/0 = SubResource("StandardMaterial3D_o3axq")
+
+[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(0.000375249, 0, 0.5, 0, 0.5, 0, -0.5, 0, 0.000375249, -0.808175, 0, -0.55634)
+use_as_traction = true
+wheel_radius = 0.4
+wheel_rest_length = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleWheel3D3"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = ExtResource("2_l7fsu")
+surface_material_override/0 = SubResource("StandardMaterial3D_o3axq")
+
+[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(0.000375249, 0, 0.5, 0, 0.5, 0, -0.5, 0, 0.000375249, -0.808844, 0, 0.335307)
+use_as_traction = true
+wheel_radius = 0.4
+wheel_rest_length = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleWheel3D4"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = ExtResource("3_1qvwu")
+surface_material_override/0 = SubResource("StandardMaterial3D_o3axq")
+
+[node name="TwistPivot" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.258819, -0.965926, 0, 0.965926, 0.258819, 1, 1.13133e-08, -4.2222e-08, -2, 2, 0)
+
+[node name="PitchPivot" type="Node3D" parent="TwistPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.19209e-07, 0, -1.04308e-07, 1, 0, -0.255, 0)
