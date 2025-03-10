@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg8pu0e70jwsk"]
+
+[ext_resource type="PackedScene" path="res://vehicle.tscn" id="1_34cpq"]
+[ext_resource type="PackedScene" uid="uid://debeix46e3rl3" path="res://assets/racetrack/wide_track_straight.tscn" id="2_e0ohk"]
+[ext_resource type="PackedScene" uid="uid://cge2sxkaxw76o" path="res://assets/racetrack/wide_track_corner_small.tscn" id="3_83ttx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_satxb"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_vix4v"]
+sky_material = SubResource("ProceduralSkyMaterial_satxb")
+
+[sub_resource type="Environment" id="Environment_ta0dp"]
+background_mode = 2
+sky = SubResource("Sky_vix4v")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ta0dp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="VehicleBody3D" parent="." instance=ExtResource("1_34cpq")]
+transform = Transform3D(0.00247618, -0.00204012, 0.999995, 0.000141531, 0.999998, 0.00203977, -0.999997, 0.000136451, 0.00247647, 0, 6.29375, 45.915)
+
+[node name="StaticBody3D5" parent="." instance=ExtResource("2_e0ohk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.676, -3.105, 1.961)
+
+[node name="StaticBody3D" parent="." instance=ExtResource("3_83ttx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636, -2.97864, 33.837)

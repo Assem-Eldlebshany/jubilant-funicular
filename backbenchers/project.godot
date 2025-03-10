@@ -13,7 +13,6 @@ config_version=5
 config/name="3D Sandbox"
 run/main_scene="res://Start World.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 

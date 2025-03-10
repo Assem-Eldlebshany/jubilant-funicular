@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds481wqyq21h5"]
+
+[ext_resource type="PackedScene" uid="uid://k1rwf3qu212k" path="res://assets/racetrack/raw/track-road-wide-corner-small.glb" id="1_m1das"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtr7l"]
+albedo_color = Color(1, 0.819608, 0.211765, 1)
+
+[node name="track-road-wide-corner-small2" instance=ExtResource("1_m1das")]
+
+[node name="track-road-wide-corner-small" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mtr7l")

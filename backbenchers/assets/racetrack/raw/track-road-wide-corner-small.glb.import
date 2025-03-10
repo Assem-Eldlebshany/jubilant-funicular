@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5s0gc0wckixv"
-path="res://.godot/imported/track-road-wide-straight.glb-65c227d5307ec61deafb0202589b0717.scn"
+uid="uid://k1rwf3qu212k"
+path="res://.godot/imported/track-road-wide-corner-small.glb-3ff2f9d3489cc87eb11e36c6af67239c.scn"
 
 [deps]
 
-source_file="res://assets/racetrack/track-road-wide-straight.glb"
-dest_files=["res://.godot/imported/track-road-wide-straight.glb-65c227d5307ec61deafb0202589b0717.scn"]
+source_file="res://assets/racetrack/raw/track-road-wide-corner-small.glb"
+dest_files=["res://.godot/imported/track-road-wide-corner-small.glb-3ff2f9d3489cc87eb11e36c6af67239c.scn"]
 
 [params]
 
@@ -33,14 +33,14 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"track-road-wide-straight_track-road-wide-straight": {
+"track-road-wide-corner-small_track-road-wide-corner-small": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://assets/racetrack/straight.res"
+"save_to_file/path": "res://assets/racetrack/raw/wide_track_corner_short_mesh.res"
 }
 }
 }

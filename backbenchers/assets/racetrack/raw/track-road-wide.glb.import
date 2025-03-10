@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3wrefvclyvay"
-path="res://.godot/imported/track-road-wide.glb-70dc7eab06ee9320cfd66cd7c7e16a13.scn"
+path="res://.godot/imported/track-road-wide.glb-48b3181410adf7d9925518ece6a51dae.scn"
 
 [deps]
 
-source_file="res://assets/racetrack/track-road-wide.glb"
-dest_files=["res://.godot/imported/track-road-wide.glb-70dc7eab06ee9320cfd66cd7c7e16a13.scn"]
+source_file="res://assets/racetrack/raw/track-road-wide.glb"
+dest_files=["res://.godot/imported/track-road-wide.glb-48b3181410adf7d9925518ece6a51dae.scn"]
 
 [params]
 
