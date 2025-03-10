@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://df4qyu6evjho1"]
+[gd_scene load_steps=8 format=3 uid="uid://cd3edqsn2xj6j"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbtlouq6uquao" path="res://assets/race-future-model/race-future_body.res" id="1_84l3r"]
 [ext_resource type="Script" path="res://vehicle.gd" id="1_qrl8u"]

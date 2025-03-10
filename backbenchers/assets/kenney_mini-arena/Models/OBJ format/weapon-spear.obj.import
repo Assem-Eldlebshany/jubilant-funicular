@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpnxndryktf75"
+path="res://.godot/imported/weapon-spear.obj-b837a1e1450e08c70957840cfebcf8ec.mesh"
+
+[deps]
+
+files=["res://.godot/imported/weapon-spear.obj-b837a1e1450e08c70957840cfebcf8ec.mesh"]
+
+source_file="res://assets/kenney_mini-arena/Models/OBJ format/weapon-spear.obj"
+dest_files=["res://.godot/imported/weapon-spear.obj-b837a1e1450e08c70957840cfebcf8ec.mesh", "res://.godot/imported/weapon-spear.obj-b837a1e1450e08c70957840cfebcf8ec.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

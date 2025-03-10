@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://rqkvy5khbfex"]
+[gd_scene load_steps=12 format=3 uid="uid://b2wbr64qe14nr"]
 
 [ext_resource type="PackedScene" uid="uid://u5fft32uli3" path="res://assets/blasterF.glb" id="2_f4aid"]
 [ext_resource type="ArrayMesh" uid="uid://dmmicfooms5qj" path="res://assets/Mecha01.obj" id="3_1deha"]
 [ext_resource type="PackedScene" path="res://player.tscn" id="3_lds0f"]
-[ext_resource type="PackedScene" path="res://vehicle.tscn" id="4_lnpd0"]
+[ext_resource type="PackedScene" uid="uid://cd3edqsn2xj6j" path="res://vehicle.tscn" id="4_lnpd0"]
 [ext_resource type="PackedScene" path="res://track_straight.tscn" id="5_7q450"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_satxb"]
