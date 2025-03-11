@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=3 uid="uid://dt6di3ps16km7"]
+
+[ext_resource type="PackedScene" uid="uid://cd3edqsn2xj6j" path="res://vehicle/vehicle.tscn" id="1_kwtxi"]
+[ext_resource type="PackedScene" uid="uid://df2wj3t1v0mkw" path="res://assets/racetrack/racetrack-components/track-road-wide-curve.tscn" id="2_ok7ns"]
+[ext_resource type="PackedScene" uid="uid://buygjficlla07" path="res://assets/racetrack/racetrack-components/track_road_wide_straight.tscn" id="3_jamrr"]
+[ext_resource type="PackedScene" uid="uid://c85i7cgf4ebhx" path="res://assets/racetrack/racetrack-components/track_wide_corner_small.tscn" id="5_6xu8w"]
+[ext_resource type="PackedScene" uid="uid://csmg0duqc0jsm" path="res://assets/racetrack/racetrack-components/track_wide_corner_small_ramp.tscn" id="6_4tp25"]
+[ext_resource type="PackedScene" uid="uid://cw8ak8i8go222" path="res://assets/racetrack/racetrack-components/track_road_wide_straight_bump_down.tscn" id="7_xhfna"]
+[ext_resource type="PackedScene" uid="uid://bufepgkorxixv" path="res://assets/racetrack/racetrack-components/track_road_wide_straight_bump_up.tscn" id="8_0xytq"]
+[ext_resource type="PackedScene" uid="uid://44ws7jqsc5k4" path="res://assets/racetrack/racetrack-components/track_road_wide_straight_hill_complete.tscn" id="9_eqfyt"]
+[ext_resource type="PackedScene" uid="uid://beoaw6ac16cfe" path="res://assets/racetrack/racetrack-components/track_road_wide_corner_large.tscn" id="10_cb0nl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5lnlt"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_vix4v"]
+sky_material = SubResource("ProceduralSkyMaterial_5lnlt")
+
+[sub_resource type="Environment" id="Environment_wm8ds"]
+background_mode = 2
+sky = SubResource("Sky_vix4v")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_smsp7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mh53f"]
+albedo_color = Color(1, 1, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wm8ds")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="VehicleBody3D" parent="." instance=ExtResource("1_kwtxi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -124.141, 10, 92.008)
+
+[node name="track-road-wide-curve2" parent="." instance=ExtResource("2_ok7ns")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 20, -80, 0, 0)
+
+[node name="track-road-wide-straight2" parent="." instance=ExtResource("3_jamrr")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 30, -80, 0, -120)
+
+[node name="track-road-wide-straight3" parent="." instance=ExtResource("3_jamrr")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 30, 79.999, 14.974, -120)
+
+[node name="track-wide-corner-small2" parent="." instance=ExtResource("5_6xu8w")]
+transform = Transform3D(-20, 0, -1.74846e-06, 0, 15, 0, 1.74846e-06, 0, -20, -80, 0, -120)
+
+[node name="track-wide-corner-small-ramp2" parent="." instance=ExtResource("6_4tp25")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 15, 0, -20, 0, -8.74228e-07, 36.98, -10.946, -175.82)
+
+[node name="track-wide-corner-small-ramp3" parent="." instance=ExtResource("6_4tp25")]
+transform = Transform3D(2.38498e-07, 0, -20, 0, 15, 0, 20, 0, 2.38498e-07, 122.998, -10.936, 55.821)
+
+[node name="track-road-wide-straight-bump-down2" parent="." instance=ExtResource("7_xhfna")]
+transform = Transform3D(-8.74228e-07, 0, 40, 0, 15, 0, -20, 0, -1.74846e-06, 119.982, 0, 40.007)
+
+[node name="track-wide-corner-small3" parent="." instance=ExtResource("5_6xu8w")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 15, 0, -20, 0, -8.74228e-07, 160, 0, -80)
+
+[node name="track-road-wide-straight-bump-up2" parent="." instance=ExtResource("8_0xytq")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 40, 200, 0, -40)
+
+[node name="track-road-wide-straight-hill-complete2" parent="." instance=ExtResource("9_eqfyt")]
+transform = Transform3D(-8.74228e-07, 0, -20, 0, 15, 0, 20, 0, -8.74228e-07, 40, 0, -80)
+
+[node name="track-road-wide-corner-large2" parent="." instance=ExtResource("10_cb0nl")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 15, 0, -20, 0, -8.74228e-07, 279.958, 0, 40)
+
+[node name="track-road-wide-corner-large3" parent="." instance=ExtResource("10_cb0nl")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 20, 359.956, 0, 119.967)
+
+[node name="track-road-wide-corner-large4" parent="." instance=ExtResource("10_cb0nl")]
+transform = Transform3D(-8.74228e-07, 0, -20, 0, 15, 0, 20, 0, -8.74228e-07, 280, 0, 200)
+
+[node name="track-road-wide-straight4" parent="." instance=ExtResource("3_jamrr")]
+transform = Transform3D(-8.74228e-07, 0, 30, 0, 15, 0, -20, 0, -1.31134e-06, 40, 0, -80)
+
+[node name="track-road-wide-straight5" parent="." instance=ExtResource("3_jamrr")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 15, 0, -20, 0, -8.74228e-07, -40, 0, -160)
+
+[node name="track-road-wide-curve3" parent="." instance=ExtResource("2_ok7ns")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 15, 0, -20, 0, -8.74228e-07, -120, 15, -120)
+
+[node name="track-road-wide-straight-hill-complete3" parent="." instance=ExtResource("9_eqfyt")]
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 15, 0, -20, 0, -8.74228e-07, -200, 0, -120)
+
+[node name="track-road-wide-corner-large5" parent="." instance=ExtResource("10_cb0nl")]
+transform = Transform3D(-20, 0, -1.74846e-06, 0, 15, 0, 1.74846e-06, 0, -20, -280, 0, -40)
+
+[node name="track-road-wide-corner-large6" parent="." instance=ExtResource("10_cb0nl")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 20, -120, 0, 80)
+
+[node name="track-road-wide-corner-large7" parent="." instance=ExtResource("10_cb0nl")]
+transform = Transform3D(-8.74228e-07, 0, -20, 0, 15, 0, 20, 0, -8.74228e-07, -200, 0, 160)
+
+[node name="track-road-wide-straight6" parent="." instance=ExtResource("3_jamrr")]
+transform = Transform3D(20, 0, 0, 0, 15, 0, 0, 0, 30, -280, 0, -40)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -186.77, 0, -22.3011)
+mesh = SubResource("PrismMesh_smsp7")
+surface_material_override/0 = SubResource("StandardMaterial3D_mh53f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 21.7994, 0, 173.629)
+mesh = SubResource("PrismMesh_smsp7")
+surface_material_override/0 = SubResource("StandardMaterial3D_mh53f")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 282, 0, 123.297)
+mesh = SubResource("PrismMesh_smsp7")
+surface_material_override/0 = SubResource("StandardMaterial3D_mh53f")

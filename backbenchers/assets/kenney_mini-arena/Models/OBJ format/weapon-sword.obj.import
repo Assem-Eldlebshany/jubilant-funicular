@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bjeu74k2tcode"
+path="res://.godot/imported/weapon-sword.obj-7ecac9eaaad8e27a85d25a65240d563b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/weapon-sword.obj-7ecac9eaaad8e27a85d25a65240d563b.mesh"]
+
+source_file="res://assets/kenney_mini-arena/Models/OBJ format/weapon-sword.obj"
+dest_files=["res://.godot/imported/weapon-sword.obj-7ecac9eaaad8e27a85d25a65240d563b.mesh", "res://.godot/imported/weapon-sword.obj-7ecac9eaaad8e27a85d25a65240d563b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

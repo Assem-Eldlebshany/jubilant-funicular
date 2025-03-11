@@ -1,0 +1,5 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2wbr64qe14nr"]
+
+[ext_resource type="PackedScene" uid="uid://u5fft32uli3" path="res://assets/models/blasterF.glb" id="2_f4aid"]
+[ext_resource type="ArrayMesh" uid="uid://dmmicfooms5qj" path="res://assets/models/Mecha01.obj" id="3_1deha"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="3_lds0f"]

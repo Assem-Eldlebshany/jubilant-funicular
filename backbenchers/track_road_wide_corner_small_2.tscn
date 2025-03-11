@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ds481wqyq21h5"]
+[gd_scene load_steps=3 format=3 uid="uid://b245s3g7y2im4"]
 
-[ext_resource type="PackedScene" uid="uid://k1rwf3qu212k" path="res://assets/racetrack/raw/track-road-wide-corner-small.glb" id="1_m1das"]
+[ext_resource type="PackedScene" uid="uid://k1rwf3qu212k" path="res://assets/track-road-wide-corner-small.glb" id="1_m1das"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtr7l"]
 albedo_color = Color(1, 0.819608, 0.211765, 1)
